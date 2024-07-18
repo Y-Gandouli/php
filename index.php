@@ -2,11 +2,11 @@
 
 echo "Hello World!";
 
-$serverName = getenv('mydatabase.mysql.database.azure.com'); // Get server name from environment variables
+$serverName = 'mydatabase.mysql.database.azure.com'; // Get server name from environment variables
 $connectionOptions = array(
-    "Database" => getenv('mytable'),  // Get database name from environment variables
-    "Uid" => getenv('admin01'),       // Get username from environment variables
-    "PWD" => getenv('wqL!Qmaj57k8Sb#')// Get password from environment variables
+    "Database" => 'mytable',  // Get database name from environment variables
+    "Uid" => 'admin01',       // Get username from environment variables
+    "PWD" => 'wqL!Qmaj57k8Sb#'// Get password from environment variables
 );
 
 try {
