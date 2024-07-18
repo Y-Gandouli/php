@@ -1,18 +1,18 @@
 <?php
 
-echo "Hello World!";
+    echo "Hello World!";
 
-$serverName = 'mydatabase.mysql.database.azure.com'; // Get server name from environment variables
-$connectionOptions = array(
-    "Database" => 'mytable',  // Get database name from environment variables
-    "Uid" => 'admin01',       // Get username from environment variables
-    "PWD" => 'wqL!Qmaj57k8Sb#'// Get password from environment variables
-);
+    // Enable us to use Headers
+    ob_start();
 
-try {
-    $conn = new PDO("sqlsrv:server=$serverName;Database=".$connectionOptions['Database'], $connectionOptions['Uid'], $connectionOptions['PWD']);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected!";
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+    // Set sessions
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+
+    $hostname = "mydatabase.mysql.database.azure.com";
+    $username = "admin01";
+    $password = "wqL!Qmaj57k8Sb#";
+    $dbname = "mytable";
+    
+    $connection = mysqli_connect($hostname, $username, $password, $dbname) or die("Database connection not established.") ;
