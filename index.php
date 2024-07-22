@@ -12,7 +12,7 @@ if (!isset($_SESSION)) {
 }
 
 $hostname = "mydatabase.mysql.database.azure.com";
-$username = "admin01@mydatabase";  
+$username = "admin01";  
 $password = "wqL!Qmaj57k8Sb#";
 $dbname = "mytable";
 
