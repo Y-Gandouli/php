@@ -1,4 +1,8 @@
 <?php
+// Start the session at the beginning before any output
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 // Enable error reporting for debugging
 error_reporting(E_ALL);
@@ -6,13 +10,8 @@ ini_set('display_errors', 1);
 
 echo "Hello World!<br>";
 
-// Set sessions
-if (!isset($_SESSION)) {
-    session_start();
-}
-
 $hostname = "mydatabase.mysql.database.azure.com";
-$username = "admin01";  
+$username = "admin01";  // Ensure the username includes the server name
 $password = "wqL!Qmaj57k8Sb#";
 $dbname = "mytable";
 
