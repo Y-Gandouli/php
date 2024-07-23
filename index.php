@@ -20,7 +20,7 @@ if (!function_exists('mysqli_connect')) {
     die("MySQLi extension is not loaded. Please ensure it is installed and enabled.");
 }
 
-echo "Attempting to connect to the database...<br>";
+echo "<br><br>";
 
 // Establish a connection to the database
 $connection = mysqli_connect($hostname, $username, $password, $dbname);
